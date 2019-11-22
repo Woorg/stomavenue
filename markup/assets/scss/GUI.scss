@@ -1,0 +1,70 @@
+.title {
+  font-family: $r;
+  font-weight: 700;
+  color: $black;
+  span {
+    color: $turq;
+  }
+  &_biggest {
+    font-size: 58px;
+    @include mq($small) {
+      font-size: 29px;
+    }
+  }
+  &_regular {
+    font-size: 36px;
+  }
+  &_small {
+    font-size: 30px;
+    @include mq($small) {
+      font-size: 21px;
+    }
+  }
+}
+
+.text {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.3;
+  span,
+  strong {
+    font-weight: 700; 
+  }
+  p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+
+.button,
+.uk-button {
+  border: none;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #61c7c7;
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+  line-height: 1;
+  @include tr(all .3s ease);
+  &:hover {
+    background-color: darken(#61c7c7, 10);
+    color: #ffffff;
+    text-decoration: none;
+    @include tr(all .3s ease);
+  }
+  &_biggest,
+  .uk-button-default {
+    padding-top: 22px;
+    padding-bottom: 22px;
+    height: 65px;
+    font-size: 20px;
+    text-transform: none;
+    border-radius: 33px;
+    @include mq($small) {
+      padding-top: 24px;
+      font-size: 18px;
+    }
+  }
+}

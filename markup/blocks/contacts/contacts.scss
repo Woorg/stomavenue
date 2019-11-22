@@ -1,0 +1,40 @@
+.contacts {
+  text-align: right;
+  white-space: nowrap;
+  &__phone {
+    position: relative;
+    margin-bottom: 6px;
+    padding-left: 22px;
+    display: block;
+    color: #FFF;
+    font-size: 28px;
+    text-transform: uppercase;
+    text-decoration: none;
+    span {
+      display: none;
+    }
+    &:after {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      content: "";
+    }
+  }
+  &__callback {
+    padding-bottom: 1px;
+    display: block;
+    color: #FFF;
+    font-size: 16px;
+    text-decoration: none;
+    span {
+      border-bottom: 1px dotted #fff;
+      @include tr(all .3s ease);
+    }
+    &:hover {
+      span {
+        border-bottom: 1px dotted transparent;
+        @include tr(all .3s ease);
+      }
+    }
+  }
+}

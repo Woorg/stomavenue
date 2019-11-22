@@ -1,0 +1,43 @@
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto Bold'), local('Roboto-Bold'),
+    url('../fonts/hinted-subset-Roboto-Bold.woff2') format('woff2'),
+    url('../fonts/hinted-subset-Roboto-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto'), local('Roboto-Regular'),
+    url('../fonts/hinted-subset-Roboto-Regular.woff2') format('woff2'),
+    url('../fonts/hinted-subset-Roboto-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto Light'), local('Roboto-Light'),
+    url('../fonts/hinted-subset-Roboto-Light.woff2') format('woff2'),
+    url('../fonts/hinted-subset-Roboto-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat Regular'), local('Montserrat-Regular'),
+    url('../fonts/hinted-subset-Montserrat-Regular.woff2') format('woff2'),
+    url('../fonts/hinted-subset-Montserrat-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+$m: 'Montserrat',  Arial, "Helvetica Neue", Helvetica, sans-serif;
+$r: 'Roboto',  Arial, "Helvetica Neue", Helvetica, sans-serif;
+
+
+
+

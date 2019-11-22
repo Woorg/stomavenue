@@ -1,0 +1,36 @@
+// Common styles of the project
+
+html,
+body {
+  height: 100%;
+}
+
+.page {
+  font-size: 18px;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: $text;
+  font-family: $r;
+  font-size: 20px;
+  font-weight: 300;
+  background-color: #fff;
+  font-display: swap;
+  &__inner {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: auto;
+    overflow: hidden;
+      
+  }
+}
+
+
+// .in {
+//   margin: auto;
+//   padding-right: 30px;
+//   padding-left: 30px;
+//   width: 100%;
+//   max-width: 1170px;
+// }

@@ -1,0 +1,46 @@
+mixin hero(data)
+  .hero.lazy(data-bg="url('assets/images/general/hero-bg.jpg')")&attributes(attributes)
+    +header()
+
+    .hero__in.in(class="uk-container")
+      .hero__row(class="uk-flex uk-flex-wrap ")
+        .hero__col(class="uk-width-1-1@s uk-width-1-2@m ")
+          .hero__content
+            h1.hero__title.title.title_biggest <span>Имплантация зубов</span> под ключ в Москве
+            .hero__text Высокое качество по доступной цене
+            ul.hero__list
+              li.hero__item.uk-flex
+                .hero__item-text без боли
+                .hero__item-text есть рассрочка
+
+              li.hero__item.uk-flex
+                .hero__item-text имплантация за 1 посещение
+              
+            a.hero__button.button.button_biggest(class="uk-button uk-button-default" href="#") Хочу бесплатный осмотр
+
+        .hero__col(class="uk-width-1-1@s uk-width-1-2@m")
+          .hero__image
+            img(src="assets/images/general/girl-image.png", alt="")
+            .hero__play-w.play
+              a.play__button(href="#") Play
+              .play__text Узнайте <br/>о клинике за 90 секунд
+    
+      .hero__row.hero__row_stats(class="uk-flex uk-flex-wrap")
+        .hero__stats.stats(class="uk-flex uk-margin-auto-left uk-margin-auto-right")
+          ul.stats__list(class="uk-flex uk-flex-wrap ")
+            li.stats__item(class="uk-width-1-3@m")
+              .stats__num 4235
+              .stats__text -имплантаций провели с 2013 года
+            li.stats__item(class="uk-width-1-3@m")
+              .stats__num 10 
+                span лет
+              .stats__text - опыт врачей <br/>в имплантологии
+            li.stats__item(class="uk-width-1-3@m")
+              .stats__num 70 
+                span пациентов
+              .stats__text - остались довольными <br/>на этой неделе
+
+
+
+        
+  // end hero

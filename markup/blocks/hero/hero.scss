@@ -1,0 +1,170 @@
+.hero {
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  background-size: 100% 850px;
+  overflow: hidden;
+  @include mq($medium) {
+    background-size: cover;
+  }
+  &__in {
+    padding-top: 18px;
+  }
+
+  &__row {
+    
+  }
+
+  &__row_stats {
+    margin-top: -99px;
+    padding-bottom: 30px;
+    @include mq($large) {
+      margin-top: 30px;
+    }
+  }
+
+  &__col {
+    
+  }
+
+  &__content {
+    margin-right: 30px;
+    @include mq($medium) {
+      margin-right: 0;
+    }
+  }
+
+  &__title {
+    margin-top: 96px;
+    margin-bottom: 19px;
+    @include mq($medium) {
+      margin-top: 48px;
+    }
+  }
+
+  &__text {
+    opacity: 0.7;
+    font-size: 30px;
+    font-weight: 400;
+    @include mq($small) {
+      font-size: 19px;
+    }
+  }
+
+  &__list {
+    @include resetlist();
+    margin-top: 50px;
+    margin-left: 8px;
+    
+  }
+
+  &__item {
+    margin-bottom: 25px;
+    font-size: 18px;
+    font-weight: 400;
+    @include mq($small) {
+      font-size: 16px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item-text {
+    position: relative;
+    margin-right: 68px;
+    padding-left: 18px;
+    @include mq($small) {
+      margin-right: 30px;
+    }
+    &:after,
+    &:before {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      content: "";
+      border-radius: 50%;
+      transform: translate(-50%,-50%);
+    }
+
+    &:after {
+      width: 17px;
+      height: 17px;
+      border: 1px solid #61c7c7;
+    }
+
+    &:before {
+      width: 7px;
+      height: 7px;
+      background-color: #61c7c7;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+  }
+
+  &__button {
+    margin-top: 50px;
+    padding-right: 66px;
+    padding-left: 66px;
+    @include mq($medium) {
+      margin-bottom: 50px;
+    }
+    @include mq($small) {
+      padding-left: 19px;
+      padding-right: 20px;
+    }
+  }
+
+  &__image {
+    position: relative;
+    margin-left: -6px;
+    @include mq($large) {
+      height: 100%;
+    }
+    @include mq($medium) {
+      margin-left: 0;
+      height: 120px;
+    }
+    img {
+      margin-top: -7px;
+      @include mq($large) {
+        display: none;
+      }
+    }
+  }
+
+  &__play-w {
+    position: absolute;
+    z-index: 1;
+    top: calc(50% - 91px);
+    right: 103px;
+    @include mq($large) {
+      left: 0;
+      right: auto;
+    }
+  }
+
+  // &__play-button {
+    
+  // }
+
+  // &__play-text {
+    
+
+  // }
+
+  &__stats {
+    position: relative;
+    left: -30px;
+    z-index: 1;
+    margin-left: -30px;
+    max-width: 778px;
+    @include mq($large) {
+      left: 0;
+      margin-left: 0;
+    }
+  }
+
+}

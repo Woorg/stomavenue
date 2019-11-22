@@ -1,0 +1,23 @@
+// custom variables
+$container-max-width: 1230px;
+$container-xsmall-max-width: 640px;
+$container-small-max-width: 960px;
+$container-padding-horizontal: 30px;
+$global-margin: 30px;
+$global-medium-gutter: 30px;
+
+
+
+// default variables
+@import '../libraries/uikit/variables-theme.scss';
+@import '../libraries/uikit/mixins-theme.scss';
+
+// custom mixins
+
+
+//import uikit
+@import '../libraries/uikit/uikit-theme.scss';
+
+
+
+

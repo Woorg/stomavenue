@@ -1,0 +1,58 @@
+.header {
+  &__in {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    // @include mq($small) {
+    //   flex-wrap: wrap;
+    // }
+  }
+  &__logo {
+    @include mq($small) {
+      margin-right: auto;
+      margin-bottom: 30px;
+      margin-left: auto;
+      // max-width: 100%;
+      // width: 100%;
+    }
+  }
+  &__contacts {
+    margin-left: auto;
+    max-width: 270px;
+    width: 100%;
+    text-align: right;
+    @include mq($small) {
+      margin-left: 0;
+      max-width: 100%;
+      text-align: center;
+    }
+  }
+  &__contacts-phone {
+    position: relative;
+    padding-left: 25px;
+    color: $black;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    @include r(all .3s ease);
+    &:after {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      content: '';
+      @include bg($phone-icon);
+      transform: translateY(-50%);
+    }
+    &:hover {
+      color: lighten($black, 20);
+      text-decoration: none;
+      @include r(all .3s ease);
+    }
+  }
+  &__contacts-address {
+    margin-top: 10px;
+    color: #707070;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+}
