@@ -2,4 +2,56 @@
   &__row {
     margin-bottom: 12px;
   }
+
+  &__field {
+    margin-bottom: 10px;
+  }
+
+  &__input {
+    border: 1px solid #d6d7d7;
+    height: 60px;
+    color: #bbbbbb;
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+    border-radius: 30px;
+    
+    @include placeholder() {
+      color: #bbbbbb;
+      font-size: 16px;
+      font-weight: 300;
+    }
+
+  }
+
+  &__submit {
+    max-width: 100%;
+    width: 100%;
+    color: #f6f6f6;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: none;
+  }
+
+  &__privacy {
+    margin-top: 36px;
+    color: #a1a2a2;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+
+  &__privacy-link {
+    display: block;
+    color: #004ca5;
+    text-decoration: underline;
+    
+    &:hover {
+      text-decoration: none;
+    }
+
+    
+  }
+  
+
 }

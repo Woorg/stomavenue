@@ -46,6 +46,46 @@ import svg4everybody from 'svg4everybody';
   
   $(function() {
 
+
+    // Teachers slider
+
+    let $reviewsSlider = $('.reviews__slider');
+
+    if ($reviewsSlider.length) {
+
+        let currentSlide;
+        let slidesCount = 0;
+        let sliderCounter = $('.reviews__count');
+        let updateSliderCounter = function(slick, currentIndex) {
+            currentSlide = slick.slickCurrentSlide() + 1;
+            slidesCount = slick.slideCount;
+            sliderCounter.html('<span class="reviews__count-current">' + currentSlide + '</span>' + '<span class="reviews__count-sep">' +  '/' + '</span>' + '<span class="reviews__count-all">' + slidesCount + '</span>');
+        };
+
+        $reviewsSlider.on('init', function(event, slick) {
+            $('.reviews__nav').append(sliderCounter);
+            updateSliderCounter(slick);
+        });
+
+        $reviewsSlider.on('afterChange', function(event, slick, currentSlide) {
+            updateSliderCounter(slick, currentSlide);
+        });
+
+        $reviewsSlider.slick({
+            slidesToShow: 1,
+            dots: false,
+            arrows: true,
+            speed: 300,
+            infinite: true,
+            waitForAnimate: false,
+            adaptiveHeight: true,
+            appendArrows: '.reviews__nav'
+        });
+
+    }
+
+
+
     /*
         Phone Mask
     */

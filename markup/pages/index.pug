@@ -8,6 +8,19 @@ html(class="no-js", lang="ru")
 
   include ../blocks/hero/hero.pug
   include ../blocks/what/what.pug
+  include ../blocks/how/how.pug
+  include ../blocks/inspection/inspection.pug
+  include ../blocks/who/who.pug
+  include ../blocks/why/why.pug
+  include ../blocks/rating/rating.pug
+  include ../blocks/reviews/reviews.pug
+  include ../blocks/certificate/certificate.pug
+  include ../blocks/price/price.pug
+  include ../blocks/faq/faq.pug
+  include ../blocks/bottom/bottom.pug
+  include ../blocks/map/map.pug
+  include ../blocks/contacts/contacts.pug
+
   //- include ../blocks/form/form.pug
   //- include ../blocks/inherit/inherit.pug
   //- include ../blocks/calc/calc.pug
@@ -35,7 +48,16 @@ html(class="no-js", lang="ru")
       main.page__inner
         +hero()
         +what()
-        
+        +how()
+        +inspection()
+        +who()
+        +why()
+        +rating()
+        +reviews()
+        +certificate()
+        +price()
+        +faq()
+        +bottom()
         //- +inherit()
         //- +what()
         //- +calc()
@@ -51,17 +73,47 @@ html(class="no-js", lang="ru")
         //- +addresses()
         //- +questions()
       .page__footer
-        //- +footer()
+        +footer()
 
-    //- script(src='//api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU&8bccaf23-e575-42cc-af50-937b35ec0ab1')
     script(src='%=static=%js/separate-js/lazyload.min.js' )
     script(src='%=static=%js/separate-js/jquery.min.js')
     script(src='%=static=%js/separate-js/uikit-core.min.js')
     script(src='%=static=%js/separate-js/uikit-icons.min.js')
 
     script(src='%=static=%js/separate-js/components/slider.min.js')
+    script(src='%=static=%js/separate-js/components/countdown.min.js')
+
 
     //- script(src='%=static=%js/separate-js/jquery.magnific-popup.min.js')
-    //- script(src='%=static=%js/separate-js/slick.min.js')
+    script(src='%=static=%js/separate-js/slick.min.js')
     //- script(src='%=static=%js/separate-js/jquery.mask.min.js')
     script(src='%=static=%js/main%=hash=%%=min=%.js')
+
+    script(src="//api-maps.yandex.ru/2.1/?apikey=d491e610-d9d0-4022-9b4c-e2d184cf5425&lang=ru_RU")
+    script.
+      ymaps.ready(init);
+      
+      function init() {
+        var myMap = new ymaps.Map('map', {
+          center: [55.764187, 37.600882], // Москва
+          zoom: 19
+        }, {
+          searchControlProvider: ''
+        });
+
+        var myPlacemark = new ymaps.Placemark(
+          [55.764360, 37.601041], {
+              balloonContent: 'Москва, Сытинский переулок, д. 5/10, стр. 3'
+          }, {
+              iconLayout: 'default#image',
+              iconImageHref: 'assets/images/general/marker-icon.png',
+              iconImageSize: [44, 62],
+              iconImageOffset: [-10, -42]
+          }      
+        );
+
+        myMap.geoObjects.add(myPlacemark);
+
+      }
+
+
